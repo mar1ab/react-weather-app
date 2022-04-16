@@ -12,7 +12,7 @@ export default function Weather() {
 
   if (ready) {
     return (
-      <div class="container">
+      <div className="container">
         <div className="Weather">
           <form>
             <input type="text" placeholder="Search city..." />
