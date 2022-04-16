@@ -4,13 +4,12 @@ import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 
 export default function Weather() {
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
     console.log(response);
-    setReady(true);
     setWeatherData({
+      ready: true,
       city: response.data.name,
       iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
@@ -22,7 +21,7 @@ export default function Weather() {
     });
   }
 
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="container">
         <div className="Weather">
