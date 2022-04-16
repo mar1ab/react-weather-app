@@ -5,9 +5,21 @@ import axios from "axios";
 
 export default function Weather() {
   const [ready, setReady] = useState(false);
+  const [weatherData, setWeatherData] = useState({});
 
   function handleResponse(response) {
     console.log(response);
+    setReady(true);
+    setWeatherData({
+      city: response.data.name,
+      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      description: response.data.weather[0].description,
+      currentTemperature: Math.round(response.data.main.temp),
+      highTemperature: Math.round(response.data.main.temp_max),
+      lowTemperature: Math.round(response.data.main.temp_min),
+      humidity: response.data.main.humidity,
+      wind: Math.round(response.data.wind.speed),
+    });
   }
 
   if (ready) {
@@ -26,25 +38,35 @@ export default function Weather() {
 
           <div className="row">
             <h1>
-              <span className="col-6" id="city"></span>
-              <img className="col-6" id="icon-element" />
+              <span className="col-6" id="city">
+                {weatherData.city}
+              </span>
+              <img
+                className="col-6"
+                id="icon-element"
+                src={weatherData.iconUrl}
+              />
             </h1>
           </div>
           <div className="row">
             <h2 className="col-6">
-              <span id="condition"> Cloudy</span>
+              <span className="text-capitalize" id="condition">
+                {weatherData.description}
+              </span>
               <br />
-              <span id="current-temp">16</span>
+              <span id="current-temp">{weatherData.currentTemperature}</span>
               <span id="temp-unit">ºC</span>
               <br />
               <span id="h-temp-indicator">H </span>
-              <span id="high-temp"> </span>20{" "}
+              <span id="high-temp"> </span>
+              {weatherData.highTemperature}
               <span id="h-degree-populate">ºC </span>
               <span id="l-temp-indicator">L </span>
-              <span id="low-temp"> </span>13{" "}
+              <span id="low-temp"> </span>
+              {weatherData.lowTemperature}
               <span id="l-degree-populate">ºC </span>
-              <div id="humidity">50%</div>
-              <div id="wind">2km/h</div>
+              <div id="humidity">{weatherData.humidity}%</div>
+              <div id="wind">{weatherData.wind}km/h</div>
             </h2>
             <h2 className="col-6">
               <span id="date-time">Sunday 16:16</span>
