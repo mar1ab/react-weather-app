@@ -39,7 +39,51 @@ export default function Weather() {
           <span id="date-time">Sunday 16:16</span>
         </h2>
       </div>
-      <div class="row forecast" id="forecast"></div>
+      <div class="row forecast" id="forecast">
+        <div class="col">
+          <strong>WED</strong>
+          <br />
+          15º/7º <br />
+          🌤
+        </div>
+        <div class="col">
+          <strong>THU</strong> <br />
+          14º/7º <br />
+          🌧
+        </div>
+        <div class="col">
+          <strong>FRI </strong>
+          <br />
+          16º/6º <br />
+          🌤
+        </div>
+        <div class="col">
+          <strong>SAT </strong>
+          <br />
+          13º/5º <br />
+          🌩
+        </div>
+        <div class="col">
+          <strong>SUN </strong>
+          <br />
+          15º/7º <br />
+          ☀️
+        </div>
+      </div>
+      <div class="btn-custom">
+        <div
+          class="btn-group"
+          role="group"
+          aria-label="Basic mixed styles example"
+        >
+          <button type="button" class="btn btn-success" id="celcius-button">
+            ºC
+          </button>
+          <button type="button" class="btn btn-success" id="fahrenheit-button">
+            ºF
+          </button>
+        </div>
+      </div>
       <a
         href="https://github.com/mar1ab/react-weather-app"
         id="github-link"
