@@ -4,6 +4,9 @@ import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 
 export default function Weather() {
+  let city = "Tokyo";
+  const apiKey = "c10c120febfbdbb2ecbedb567e2ec32d";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   return (
     <div class="container">
       <div className="Weather">
