@@ -42,7 +42,7 @@ export default function Weather() {
             <span id="date-time">Sunday 16:16</span>
           </h2>
         </div>
-        <div className="row forecast" id="forecast">
+        <div className="row forecast m-3" id="forecast">
           <div className="col">
             <strong>WED</strong>
             <br />
