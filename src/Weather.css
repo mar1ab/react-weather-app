@@ -60,11 +60,11 @@ img {
   border-radius: 5px;
 }
 .btn {
-  color: rgb(78, 78, 78);
-  text-align: center;
-  border-width: 0px;
-  background-color: rgb(9, 146, 180, 0.5);
-  border-radius: 5px;
+  color: rgb(78, 78, 78) !important;
+  text-align: center !important;
+  border-width: 0px !important;
+  background-color: rgb(9, 146, 180, 0.5) !important;
+  border-radius: 5px !important;
 }
 .btn-custom {
   padding: 20px;
@@ -75,10 +75,13 @@ img {
   border-color: rgb(9, 146, 180);
 }
 #github-link {
+  color: rgb(26, 26, 26);
   text-align: center;
   display: block;
   margin: 0 auto;
+  text-decoration: none;
 }
 #github-link:hover {
   color: rgb(26, 26, 26);
+  text-decoration: underline;
 }
