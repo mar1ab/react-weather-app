@@ -14,14 +14,14 @@ export default function Weather() {
         </button>
       </form>
 
-      <div class="row">
+      <div className="row">
         <h1>
-          <span class="col-6" id="city"></span>
-          <img class="col-6" id="icon-element" />
+          <span className="col-6" id="city"></span>
+          <img className="col-6" id="icon-element" />
         </h1>
       </div>
-      <div class="row">
-        <h2 class="col-6">
+      <div className="row">
+        <h2 className="col-6">
           <span id="condition"> Cloudy</span>
           <br />
           <span id="current-temp">16</span>
@@ -35,51 +35,55 @@ export default function Weather() {
           <div id="humidity">50%</div>
           <div id="wind">2km/h</div>
         </h2>
-        <h2 class="col-6">
+        <h2 className="col-6">
           <span id="date-time">Sunday 16:16</span>
         </h2>
       </div>
-      <div class="row forecast" id="forecast">
-        <div class="col">
+      <div className="row forecast" id="forecast">
+        <div className="col">
           <strong>WED</strong>
           <br />
           15º/7º <br />
           🌤
         </div>
-        <div class="col">
+        <div className="col">
           <strong>THU</strong> <br />
           14º/7º <br />
           🌧
         </div>
-        <div class="col">
+        <div className="col">
           <strong>FRI </strong>
           <br />
           16º/6º <br />
           🌤
         </div>
-        <div class="col">
+        <div className="col">
           <strong>SAT </strong>
           <br />
           13º/5º <br />
           🌩
         </div>
-        <div class="col">
+        <div className="col">
           <strong>SUN </strong>
           <br />
           15º/7º <br />
           ☀️
         </div>
       </div>
-      <div class="btn-custom">
+      <div className="btn-custom">
         <div
-          class="btn-group"
+          className="btn-group"
           role="group"
           aria-label="Basic mixed styles example"
         >
-          <button type="button" class="btn btn-success" id="celcius-button">
+          <button type="button" className="btn btn-success" id="celcius-button">
             ºC
           </button>
-          <button type="button" class="btn btn-success" id="fahrenheit-button">
+          <button
+            type="button"
+            className="btn btn-success"
+            id="fahrenheit-button"
+          >
             ºF
           </button>
         </div>
