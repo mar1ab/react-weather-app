@@ -27,9 +27,6 @@ input {
   border-width: 2px;
   border-radius: 5px;
 }
-img {
-  max-width: 150px;
-}
 
 .container {
   margin: 20px auto;
