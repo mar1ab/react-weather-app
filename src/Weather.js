@@ -3,6 +3,7 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import "./Weather.css";
 import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -36,7 +37,7 @@ export default function Weather(props) {
               <i className="fas fa-map-marker-alt"></i>
             </button>
           </form>
-
+          <WeatherInfo />
           <div className="row">
             <h1>
               <span className="col-6" id="city">
