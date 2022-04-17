@@ -9,7 +9,12 @@ export default function WeatherInfo(props) {
           <span className="col-6" id="city">
             {props.data.city}
           </span>
-          <img className="col-6" id="icon-element" src={props.data.iconUrl} />
+          <img
+            className="col-6"
+            id="icon-element"
+            src={props.data.iconUrl}
+            alt={props.data.description}
+          />
         </h1>
       </div>
       <div className="row">
