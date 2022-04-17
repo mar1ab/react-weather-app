@@ -17,13 +17,12 @@ export default function Temperature(props) {
     return (
       <span className="Temperature">
         {Math.round(props.currentCelsius)}
-        <span className="unit">ºC</span>
+        ºC
         <br />
-        <span>H: </span>
-        <span> {props.highCelsius} </span>
-        <span>ºC </span> |<span> L: </span>
-        <span>{props.lowCelsius}</span>
-        <span>ºC </span>
+        H:
+        {props.highCelsius}
+        {props.lowCelsius}
+        ºC
         <div className="btn-custom">
           <div
             className="btn-group"
@@ -51,13 +50,13 @@ export default function Temperature(props) {
     return (
       <span className="Temperature">
         {currentFahrentheit}
-        <span>ºF</span>
+        ºF
         <br />
-        <span>H: </span>
-        <span> {highFahrentheit} </span>
-        <span>ºF </span> |<span> L: </span>
-        <span>{lowFahrentheit}</span>
-        <span>ºF </span>
+        H:
+        {highFahrentheit}
+        ºF | L:
+        {lowFahrentheit}
+        ºF
         <div className="btn-custom">
           <div
             className="btn-group"
