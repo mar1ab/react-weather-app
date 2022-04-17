@@ -20,8 +20,7 @@ export default function Temperature(props) {
         ºC
         <br />
         H:
-        {props.highCelsius}
-        {props.lowCelsius}
+        {props.highCelsius}ºC | L:{props.lowCelsius}
         ºC
         <div className="btn-custom">
           <div
