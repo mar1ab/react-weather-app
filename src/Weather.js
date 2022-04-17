@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import "./Weather.css";
-import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
+import "bootstrap/dist/css/bootstrap.css";
+import "./Weather.css";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -18,6 +19,7 @@ export default function Weather(props) {
       lowTemperature: Math.round(response.data.main.temp_min),
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -68,7 +70,9 @@ export default function Weather(props) {
               <div id="wind">{weatherData.wind}km/h</div>
             </h2>
             <h2 className="col-6">
-              <span id="date-time">Sunday 16:16</span>
+              <span id="date-time">
+                <FormattedDate date={weatherData.date} />
+              </span>
             </h2>
           </div>
           <div className="row forecast m-3" id="forecast">
