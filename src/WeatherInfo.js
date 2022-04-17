@@ -21,13 +21,15 @@ export default function WeatherInfo(props) {
             highCelsius={props.data.highTemperature}
             lowCelsius={props.data.lowTemperature}
           />
-          <div>Humidity: {props.data.humidity}%</div>
-          <div>Wind: {props.data.wind}km/h</div>
         </h2>
         <h2 className="col-6">
           <span>
+            Last updated
             <FormattedDate date={props.data.date} />
           </span>
+          <br />
+          <div>Humidity: {props.data.humidity}%</div>
+          <div>Wind: {props.data.wind}km/h</div>
         </h2>
       </div>
       <div className="row forecast m-3" id="forecast">
