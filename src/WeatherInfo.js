@@ -14,26 +14,22 @@ export default function WeatherInfo(props) {
       </div>
       <div className="row">
         <h2 className="col-6">
-          <span className="text-capitalize" id="condition">
-            {props.data.description}
-          </span>
+          <span className="text-capitalize">{props.data.description}</span>
           <br />
-          <span id="current-temp">
+          <span>
             <Temperature celsius={props.data.currentTemperature} />
           </span>
           <br />
-          <span id="h-temp-indicator">H: </span>
-          <span id="high-temp"> </span>
-          {props.data.highTemperature}
-          <span id="h-degree-populate">ºC </span> |
-          <span id="l-temp-indicator"> L: </span>
-          <span id="low-temp">{props.data.lowTemperature}</span>
-          <span id="l-degree-populate">ºC </span>
-          <div id="humidity">Humidity: {props.data.humidity}%</div>
-          <div id="wind">Wind: {props.data.wind}km/h</div>
+          <span>H: </span>
+          <span> {props.data.highTemperature} </span>
+          <span>ºC </span> |<span> L: </span>
+          <span>{props.data.lowTemperature}</span>
+          <span>ºC </span>
+          <div>Humidity: {props.data.humidity}%</div>
+          <div>Wind: {props.data.wind}km/h</div>
         </h2>
         <h2 className="col-6">
-          <span id="date-time">
+          <span>
             <FormattedDate date={props.data.date} />
           </span>
         </h2>

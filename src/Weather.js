@@ -63,25 +63,17 @@ export default function Weather(props) {
               role="group"
               aria-label="Basic mixed styles example"
             >
-              <button
-                type="button"
-                className="btn btn-primary"
-                id="celcius-button"
-              >
+              <button type="button" className="btn btn-primary">
                 ºC
               </button>
-              <button
-                type="button"
-                className="btn btn-primary"
-                id="fahrenheit-button"
-              >
+              <button type="button" className="btn btn-primary">
                 ºF
               </button>
             </div>
           </div>
           <a
             href="https://github.com/mar1ab/react-weather-app"
-            id="github-link"
+            className="github-link"
             target="_blank"
             rel="noreferrer"
           >

@@ -71,13 +71,13 @@ input {
   background-color: rgb(9, 146, 180);
   border-color: rgb(9, 146, 180);
 }
-#github-link {
+.github-link {
   color: rgb(78, 78, 78);
   text-align: center;
   display: block;
   margin: 0 auto;
   text-decoration: none;
 }
-#github-link:hover {
+.github-link:hover {
   color: rgb(26, 26, 26);
 }
