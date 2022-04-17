@@ -57,20 +57,6 @@ export default function Weather(props) {
           </form>
           <WeatherInfo data={weatherData} />
 
-          <div className="btn-custom">
-            <div
-              className="btn-group"
-              role="group"
-              aria-label="Basic mixed styles example"
-            >
-              <button type="button" className="btn btn-primary">
-                ºC
-              </button>
-              <button type="button" className="btn btn-primary">
-                ºF
-              </button>
-            </div>
-          </div>
           <a
             href="https://github.com/mar1ab/react-weather-app"
             className="github-link"

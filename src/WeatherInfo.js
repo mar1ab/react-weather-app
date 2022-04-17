@@ -16,15 +16,11 @@ export default function WeatherInfo(props) {
         <h2 className="col-6">
           <span className="text-capitalize">{props.data.description}</span>
           <br />
-          <span>
-            <Temperature celsius={props.data.currentTemperature} />
-          </span>
-          <br />
-          <span>H: </span>
-          <span> {props.data.highTemperature} </span>
-          <span>ºC </span> |<span> L: </span>
-          <span>{props.data.lowTemperature}</span>
-          <span>ºC </span>
+          <Temperature
+            currentCelsius={props.data.currentTemperature}
+            highCelsius={props.data.highTemperature}
+            lowCelsius={props.data.lowTemperature}
+          />
           <div>Humidity: {props.data.humidity}%</div>
           <div>Wind: {props.data.wind}km/h</div>
         </h2>
