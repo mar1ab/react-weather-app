@@ -2,6 +2,10 @@ import React from "react";
 import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherForecast() {
+  const apiKey = "c10c120febfbdbb2ecbedb567e2ec32d";
+  let latitude = 35.6895;
+  let longitude = 139.6917;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude={part}&appid=${apiKey}`;
   return (
     <div>
       <div className="WeatherForecast row forecast m-3" id="forecast">
