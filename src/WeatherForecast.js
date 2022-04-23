@@ -9,31 +9,31 @@ export default function WeatherForecast() {
           <strong>WED</strong>
           <br />
           15º/7º <br />
-          <WeatherIcon code="01d" />
+          <WeatherIcon code="01d" size={50} />
         </div>
         <div className="col">
           <strong>THU</strong>
           <br />
           14º/7º <br />
-          <WeatherIcon code="01d" />
+          <WeatherIcon code="01d" size={50} />
         </div>
         <div className="col">
           <strong>FRI</strong>
           <br />
           16º/6º <br />
-          <WeatherIcon code="01d" />
+          <WeatherIcon code="01d" size={50} />
         </div>
         <div className="col">
           <strong>SAT</strong>
           <br />
           13º/5º <br />
-          <WeatherIcon code="01d" />
+          <WeatherIcon code="01d" size={50} />
         </div>
         <div className="col">
           <strong>SUN</strong>
           <br />
           15º/7º <br />
-          <WeatherIcon code="01d" />
+          <WeatherIcon code="01d" size={50} />
         </div>
       </div>
     </div>
