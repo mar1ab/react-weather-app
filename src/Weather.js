@@ -56,15 +56,6 @@ export default function Weather(props) {
             </button>
           </form>
           <WeatherInfo data={weatherData} />
-
-          <a
-            href="https://github.com/mar1ab/react-weather-app"
-            className="github-link"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View on GitHub
-          </a>
         </div>
       </div>
     );
