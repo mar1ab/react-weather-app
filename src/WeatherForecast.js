@@ -22,7 +22,7 @@ export default function WeatherForecast(props) {
             <br />
             <span className="forecast-high">{forecast[0].temp.max}</span>º/
             <span className="forecast-low">{forecast[0].temp.min}</span>º <br />
-            <WeatherIcon code="01d" size={50} />
+            <WeatherIcon code={forecast[0].weather[0].icon} size={50} />
           </div>
         </div>
       </div>
