@@ -18,31 +18,36 @@ export default function WeatherForecast(props) {
           <div className="col">
             <strong>WED</strong>
             <br />
-            15º/7º <br />
+            <span className="forecast-high">15</span>º/
+            <span className="forecast-low">7</span>º <br />
             <WeatherIcon code="01d" size={50} />
           </div>
           <div className="col">
             <strong>THU</strong>
             <br />
-            14º/7º <br />
+            <span className="forecast-high">14</span>º/
+            <span className="forecast-low">7</span>º <br />
             <WeatherIcon code="01d" size={50} />
           </div>
           <div className="col">
             <strong>FRI</strong>
             <br />
-            16º/6º <br />
+            <span className="forecast-high">16</span>º/
+            <span className="forecast-low">6</span>º <br />
             <WeatherIcon code="01d" size={50} />
           </div>
           <div className="col">
             <strong>SAT</strong>
             <br />
-            13º/5º <br />
+            <span className="forecast-high">13</span>º/
+            <span className="forecast-low">5</span>º <br />
             <WeatherIcon code="01d" size={50} />
           </div>
           <div className="col">
             <strong>SUN</strong>
             <br />
-            15º/7º <br />
+            <span className="forecast-high">15</span>º/
+            <span className="forecast-low">7</span>º <br />
             <WeatherIcon code="01d" size={50} />
           </div>
         </div>
