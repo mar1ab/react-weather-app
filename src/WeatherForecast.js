@@ -18,8 +18,8 @@ export default function WeatherForecast(props) {
           <div className="col">
             <strong>WED</strong>
             <br />
-            <span className="forecast-high">15</span>º/
-            <span className="forecast-low">7</span>º <br />
+            <span className="forecast-high">{forecast[0].temp.max}</span>º/
+            <span className="forecast-low">{forecast[0].temp.min}</span>º <br />
             <WeatherIcon code="01d" size={50} />
           </div>
         </div>
