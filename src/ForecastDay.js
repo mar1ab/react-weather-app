@@ -12,11 +12,18 @@ export default function ForecastDay(props) {
     return `${temperature}º`;
   }
 
+  function day() {
+    let date = new Date(props.data.dt * 1000);
+    let day = date.getDay();
+    let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+    return days[day];
+  }
+
   return (
     <div className="ForecastDay row forecast m-3">
       <div className="col">
         <span className="forecast-day">
-          <strong>{props.data.dt}</strong>
+          <strong>{day()}</strong>
         </span>
         <br />
         <span className="forecast-high">{highTemp()}</span>/
