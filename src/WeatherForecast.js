@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import WeatherIcon from "./WeatherIcon";
+import ForecastDay from "./ForecastDay";
 
 export default function WeatherForecast(props) {
   let [loaded, setLoaded] = useState(false);
