@@ -16,7 +16,9 @@ export default function WeatherForecast(props) {
       <div>
         <div className="WeatherForecast row forecast m-3" id="forecast">
           <div className="col">
-            <strong>WED</strong>
+            <span className="forecast-day">
+              <strong>WED</strong>
+            </span>
             <br />
             <span className="forecast-high">{forecast[0].temp.max}</span>º/
             <span className="forecast-low">{forecast[0].temp.min}</span>º <br />
