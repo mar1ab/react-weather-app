@@ -15,17 +15,7 @@ export default function WeatherForecast(props) {
   if (loaded) {
     return (
       <div>
-        <div className="WeatherForecast row forecast m-3" id="forecast">
-          <div className="col">
-            <span className="forecast-day">
-              <strong>{forecast[0].dt}</strong>
-            </span>
-            <br />
-            <span className="forecast-high">{forecast[0].temp.max}</span>º/
-            <span className="forecast-low">{forecast[0].temp.min}</span>º <br />
-            <WeatherIcon code={forecast[0].weather[0].icon} size={50} />
-          </div>
-        </div>
+        <ForecastDay data={forecast[0]} />
       </div>
     );
   } else {
