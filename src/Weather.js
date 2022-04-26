@@ -25,7 +25,7 @@ export default function Weather(props) {
     });
   }
 
-  function search() {
+  function searchCity() {
     const apiKey = "c10c120febfbdbb2ecbedb567e2ec32d";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
@@ -33,11 +33,24 @@ export default function Weather(props) {
 
   function handleSumbit(event) {
     event.preventDefault();
-    search();
+    searchCity();
   }
 
   function handleCityChange(event) {
     setCity(event.target.value);
+  }
+
+  function getCurrentCoords(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchCurrentCity);
+  }
+
+  function searchCurrentCity(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    const apiKey = "c10c120febfbdbb2ecbedb567e2ec32d";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
   }
 
   if (weatherData.ready) {
@@ -54,7 +67,10 @@ export default function Weather(props) {
               <i className="fas fa-search"></i>
             </button>
             <button className="form-buttons">
-              <i className="fas fa-map-marker-alt"></i>
+              <i
+                className="fas fa-map-marker-alt"
+                onClick={getCurrentCoords}
+              ></i>
             </button>
           </form>
           <WeatherInfo data={weatherData} />
@@ -63,7 +79,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    search();
+    searchCity();
     return "Loading...";
   }
 }
